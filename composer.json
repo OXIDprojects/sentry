@@ -1,0 +1,21 @@
+{
+  "name": "oxid-professional-services/sentry",
+  "description": "sentry integration for OXID",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "sentry", "error tracking"],
+  "license": "proprietary",
+  "version": "0.0.1",
+  "require":{
+    "sentry/sdk" : "2.0.*"
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "oxps/sentry"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "OxidProfessionalServices\\Sentry\\": "../../../source/modules/oxps/sentry"
+    }
+  }
+}
