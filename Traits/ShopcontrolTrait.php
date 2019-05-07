@@ -2,16 +2,18 @@
 
 namespace OxidProfessionalServices\Sentry\Traits;
 
+use OxidEsales\Eshop\Core\Registry;
+
 trait ShopcontrolTrait
 {
     public function start($sClass = null, $sFunction = null, $aParams = null, $aViewsChain = null)
     {
-        $sentryUrl = oxRegistry::getConfig()->getConfigParam('oxpsSentryPhpUrl');
-        if ($sentryUrl != '' && class_exists('Raven_Client')) {
-            $client = new Raven_Client($sentryUrl);
-            $client->install();
-            $client->setEnvironment(oxRegistry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'));
-            oxRegistry::set('sentryClient', $client);
+        $sentryUrl = Registry::getConfig()->getConfigParam('oxpsSentryPhpUrl');
+        if ($sentryUrl != '' && class_exists('Sentry')) {
+            \Sentry\init([
+                'dsn'         => $sentryUrl,
+                'environment' => Registry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'),
+            ]);
         }
 
         parent::start($sClass, $sFunction, $aParams, $aViewsChain);
