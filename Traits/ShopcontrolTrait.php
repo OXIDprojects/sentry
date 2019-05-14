@@ -3,14 +3,15 @@
 namespace OxidProfessionalServices\Sentry\Traits;
 
 use OxidEsales\Eshop\Core\Registry;
+use function Sentry\init;
 
 trait ShopcontrolTrait
 {
     public function start($sClass = null, $sFunction = null, $aParams = null, $aViewsChain = null)
     {
         $sentryUrl = Registry::getConfig()->getConfigParam('oxpsSentryPhpUrl');
-        if ($sentryUrl != '' && class_exists('Sentry')) {
-            \Sentry\init([
+        if ($sentryUrl != '' && function_exists('Sentry\init')) {
+            init([
                 'dsn'         => $sentryUrl,
                 'environment' => Registry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'),
             ]);
