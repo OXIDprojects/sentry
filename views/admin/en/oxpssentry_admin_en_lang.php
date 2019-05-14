@@ -6,6 +6,7 @@ $aLang = [
     'oxpssentry'                               => 'Sentry integration for OXID',
 
     // Settings
+    'SHOP_MODULE_GROUP_main'                   => 'General',
     'SHOP_MODULE_oxpsSentryEnvirnoment'        => 'Environment Name',
     'SHOP_MODULE_oxpsSentryPhpUrl'             => 'PHP-API Url',
     'SHOP_MODULE_oxpsSentryJsUrl'              => 'JS-API Url',
