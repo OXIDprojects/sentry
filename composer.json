@@ -4,7 +4,7 @@
   "type": "oxideshop-module",
   "keywords": ["oxid", "modules", "sentry", "error tracking"],
   "license": "proprietary",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "require":{
     "sentry/sdk" : "2.0.*"
   },
