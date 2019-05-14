@@ -2,18 +2,14 @@
 
 namespace OxidProfessionalServices\Sentry\Traits;
 
-use OxidEsales\Eshop\Core\Registry;
+use function Sentry\captureException;
 
 trait BaseTrait
 {
     protected function reportToSentry($exception)
     {
-        if (class_exists('Sentry')) {
-            $ip = '';
-            if (!empty($_SERVER['REMOTE_ADDR'])) {
-                $ip = $_SERVER['REMOTE_ADDR'];
-            }
-            \Sentry\captureException($exception, ['user' => ['id' => md5($ip)]]);
+        if (function_exists('Sentry\captureException')) {
+            captureException($exception);
         }
     }
 }
