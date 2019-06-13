@@ -30,6 +30,12 @@ $aModule = [
         ],
         [
             'group' => 'main',
+            'name'  => 'oxpsSentryProxy',
+            'type'  => 'str',
+            'value' => null
+        ],
+        [
+            'group' => 'main',
             'name'  => 'oxpsSentryPhpUrl',
             'type'  => 'str',
             'value' => ''

@@ -14,6 +14,7 @@ trait ShopcontrolTrait
             init([
                 'dsn'         => $sentryUrl,
                 'environment' => Registry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'),
+                'http_proxy'  => Registry::getConfig()->getConfigParam('oxpsSentryProxy') ?: null,
             ]);
         }
 

@@ -9,6 +9,7 @@ $aLang = [
     'SHOP_MODULE_GROUP_main'                   => 'Allgemein',
     'SHOP_MODULE_oxpsSentryEnvirnoment'        => 'Name des Environments',
     'SHOP_MODULE_oxpsSentryPhpUrl'             => 'PHP-API Url',
+    'SHOP_MODULE_oxpsSentryProxy'              => 'Proxy',
     'SHOP_MODULE_oxpsSentryJsUrl'              => 'JS-API Url',
     'SHOP_MODULE_oxpsSentryLogLevel'           => 'Log-Level, die direkt an sentry gesendet werden sollen',
     'SHOP_MODULE_oxpsSentryLogLevel_none'      => 'none',
