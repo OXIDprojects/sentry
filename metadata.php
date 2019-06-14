@@ -9,7 +9,7 @@ $aModule = [
         'en' => 'sentry integration for OXID',
     ],
     'thumbnail'   => 'out/pictures/oxpssentry.png',
-    'version'     => '0.0.1',
+    'version'     => '1.0.1',
     'author'      => 'OXID Professional Services',
     'url'         => 'http://www.oxid-esales.com',
     'email'       => 'info@oxid-esales.com',
