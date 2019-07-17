@@ -1,5 +1,5 @@
 <?php
-$sMetadataVersion = '1.1';
+$sMetadataVersion = '2.1';
 
 $aModule = [
     'id'          => 'oxpssentry',
