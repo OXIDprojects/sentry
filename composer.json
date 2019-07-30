@@ -3,8 +3,7 @@
   "description": "sentry integration for OXID",
   "type": "oxideshop-module",
   "keywords": ["oxid", "modules", "sentry", "error tracking"],
-  "license": "proprietary",
-  "version": "1.0.1",
+  "license": "GPL-3.0-only",
   "require":{
     "sentry/sdk" : "2.0.*"
   },
