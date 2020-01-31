@@ -17,7 +17,7 @@ trait ShopcontrolTrait
                 'environment' => Registry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'),
                 'http_proxy'  => Registry::getConfig()->getConfigParam('oxpsSentryProxy') ?: null,
                 'error_types' => ErrorTypes::getTypesByClass(
-                    Registry::getConfig()->getConfigParam('oxpsSentryLogLevel')
+                    Registry::getConfig()->getConfigParam('oxpsSentryPHPErrorLevel') ?: 'info'
                 )
             ]);
         }

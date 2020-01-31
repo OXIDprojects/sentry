@@ -54,7 +54,14 @@ $aModule = [
             'name'        => 'oxpsSentryLogLevel',
             'type'        => 'select',
             'value'       => 'none',
-            'constraints' => implode('|', ErrorTypes::getTypeClasses())
+            'constraints' => 'none|emergency|alert|critical|error|warning|notice|info|debug',
         ],
+        [
+            'group'       => 'main',
+            'name'        => 'oxpsSentryPHPErrorLevel',
+            'type'        => 'select',
+            'value'       => 'info',
+            'constraints' => implode('|', ErrorTypes::getTypeClasses())
+        ]
     ],
 ];
