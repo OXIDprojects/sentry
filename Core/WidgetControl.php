@@ -6,5 +6,6 @@ use OxidProfessionalServices\Sentry\Traits\{BaseTrait, ShopcontrolTrait};
 
 class WidgetControl extends WidgetControl_parent
 {
-    use BaseTrait, ShopcontrolTrait;
+    use BaseTrait;
+    use ShopcontrolTrait;
 }

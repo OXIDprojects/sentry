@@ -1,4 +1,5 @@
 <?php
+
 $sLangName = 'Deutsch';
 
 $aLang = [
