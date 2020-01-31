@@ -9,6 +9,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Validate composer.json
       run: composer validate
+    - name: install composer dependencies
+      run: composer install
     - name: lint php files
       run: composer lint
     - name: check codestyle
