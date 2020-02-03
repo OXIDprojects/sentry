@@ -1,5 +1,7 @@
 <?php
 
+use OxidProfessionalServices\Sentry\Core\ErrorTypes;
+
 $sMetadataVersion = '2.1';
 
 $aModule = [
@@ -54,5 +56,12 @@ $aModule = [
             'value'       => 'none',
             'constraints' => 'none|emergency|alert|critical|error|warning|notice|info|debug',
         ],
+        [
+            'group'       => 'main',
+            'name'        => 'oxpsSentryPHPErrorLevel',
+            'type'        => 'select',
+            'value'       => 'info',
+            'constraints' => implode('|', ErrorTypes::getTypeClasses())
+        ]
     ],
 ];

@@ -3,6 +3,7 @@
 namespace OxidProfessionalServices\Sentry\Traits;
 
 use OxidEsales\Eshop\Core\Registry;
+use OxidProfessionalServices\Sentry\Core\ErrorTypes;
 
 use function Sentry\init;
 
@@ -16,6 +17,9 @@ trait ShopcontrolTrait
                 'dsn'         => $sentryUrl,
                 'environment' => Registry::getConfig()->getConfigParam('oxpsSentryEnvirnoment'),
                 'http_proxy'  => Registry::getConfig()->getConfigParam('oxpsSentryProxy') ?: null,
+                'error_types' => ErrorTypes::getTypesByClass(
+                    Registry::getConfig()->getConfigParam('oxpsSentryPHPErrorLevel') ?: 'info'
+                )
             ]);
         }
 
